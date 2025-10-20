@@ -1,5 +1,91 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #006400; 
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
 
-body{
-    background: white;
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.corner-symbol {
+    position: absolute;
+    font-size: 2.2em;
+    line-height: 0.8;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.center-value {
+    font-size: 7em;
+    font-weight: bold;
+    position: absolute;
+    line-height: 1;
+}
+
+.red-symbol {
+    color: #e74c3c; 
+}
+
+.black-symbol {
+    color: #333;
+}
+
+#generate-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #f39c12; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#generate-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+}
+
+#generate-button:active {
+    background-color: #d35400;
+    transform: translateY(0);
 }
