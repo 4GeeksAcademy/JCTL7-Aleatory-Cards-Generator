@@ -8,6 +8,16 @@
 </head>
 <body>
     <div class="game-container">
+        <div class="controls-container">
+            <div class="input-group">
+                <label for="card-width">Ancho (px):</label>
+                <input type="number" id="card-width" value="200" min="100">
+            </div>
+            <div class="input-group">
+                <label for="card-height">Alto (px):</label>
+                <input type="number" id="card-height" value="280" min="140">
+            </div>
+        </div>
         <div id="random-card" class="card">
             <div class="corner-symbol top-left">
                 <span id="value-top"></span>
@@ -19,7 +29,10 @@
               <span id="symbol-bottom"></span>  
             </div>
         </div>
-        <button id="generate-button">Generar Naipe</button>
+        <div class="button-group">
+            <button id="generate-button" title="Genera una carta manualmente">Generar Nueva Carta</button>
+            <button id="timer-toggle-button" title="Inicia/Detiene la generación automática">Iniciar Temporizador (10s)</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
